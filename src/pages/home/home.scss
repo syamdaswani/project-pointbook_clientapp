@@ -1,0 +1,66 @@
+page-home {
+
+  .stickToSide {
+    margin-right: -6vw;
+  }
+  .card-background-page {
+
+    ion-card {
+      position: relative;
+      text-align: center;
+      margin: 0;
+      overflow: visible;
+      box-shadow: none;
+    }
+
+    .card-title {
+      position: absolute;
+      top: 40%;
+      font-size: 1.6em;
+      width: 100%;
+      font-weight: bold;
+      padding: 10px;
+    }
+
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 60%;
+      width: 100%;
+    }
+
+  }
+  /*ion-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 90px 1px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }*/
+  .no-margin-slides{
+    margin-left: -5%;
+    margin-right: -5%;
+    width: 110%;
+    margin-bottom: -5%;
+    height: 93%;
+  }
+  .content-description {
+    height: 30vh;
+    font-size: 70%;
+    margin: 0 10vw -10vh 10vw;
+  }
+  .swiper-pagination {
+    margin-bottom: 17vh;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #FFF;
+  }
+  .select-button {
+    margin: 0 auto;
+    margin-top: 10vh;
+    width: 80vw;
+  }
+}

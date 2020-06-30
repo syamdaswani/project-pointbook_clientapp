@@ -1,0 +1,48 @@
+<!--
+  Generated template for the ChooseDatetimeDurationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border no-shadow>
+
+  <ion-navbar #navbar>
+    <ion-title text-center>APPOINTMENT DETAILS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="primarybg">
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Date</ion-label>
+      <ion-datetime displayFormat="DDDD, MMMM DD" [(ngModel)]="appDateTime"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Time</ion-label>
+      <ion-datetime displayFormat="hh:mm A" minuteValues="0,15,30,45" [(ngModel)]="appDateTime"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Duration(hours)</ion-label>
+      <ion-select [(ngModel)]="appDuration">
+        <ion-option value="0.5">30 mins</ion-option>
+        <ion-option value="1.0">1 hour</ion-option>
+        <ion-option value="1.5">1 hour and 30 mins</ion-option>
+        <ion-option value="2.0">2 hours</ion-option>
+        <ion-option value="2.5">2 hours and 30 mins</ion-option>
+        <ion-option value="3.0">3 hours</ion-option>
+        <ion-option value="3.5">3 hours and 30 mins</ion-option>
+        <ion-option value="4.0">4 hours</ion-option>
+        <ion-option value="4.5">4 hours and 30 mins</ion-option>
+        <ion-option value="5.0">5 hours</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <button ion-button clear
+          (click)="sharedFunctions.goToPage(navCtrl, 'SelectServiceProviderPage',
+          {serviceid: serviceId})"
+          class="nextButtonBottomRight" >
+    <ion-icon name="ios-arrow-dropright-circle-outline"></ion-icon>
+  </button>
+</ion-content>

@@ -1,0 +1,25 @@
+<!--
+  Generated template for the VerifyCodePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar #navbar>
+    <ion-title>CODE VERIFICATION</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <!--TODO check if best to sign in only via phone number-->
+  <form #codeForm="ngForm" (ngSubmit)="verifyCode(codeForm)">
+    <ion-item>
+      <ion-label floating>Verification Code</ion-label>
+      <ion-input type="number" name="verificationCode" [(ngModel)]="verificationCode"></ion-input>
+    </ion-item>
+    <button ion-button full type="submit">Verify Code</button>
+  </form>
+  <div id="re-container"></div>
+</ion-content>

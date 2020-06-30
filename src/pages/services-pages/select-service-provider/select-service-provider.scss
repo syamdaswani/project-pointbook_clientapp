@@ -1,0 +1,66 @@
+page-select-service-provider {
+  .item-md {
+    background-color: #FFF;
+  }
+  h2 {
+    font-weight: bold !important;
+  }
+  ul {
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    &.rating li {
+      padding: 0px 0px !important;
+      background: none;
+      color: #ffb400;
+      ion-icon {
+        font-size: 20px;
+      }
+    }
+  }
+  button[disabled=disabled], button:disabled {
+    opacity: 1;
+    &.onPromoClass {
+      padding: 5px;
+      background-color: #4A1C54;
+      color: white;
+    }
+    &.onlineStatus {
+      width: 22vw;
+      padding: 5px;
+      background-color: darkgoldenrod;
+      float: right;
+      font-size: 70%;
+      //Need to declare color because it is used in a disabled button which changes the global font color declared in variables.scss
+      color: #FFF;
+    }
+    &.offlineStatus {
+      width: 22vw;
+      padding: 5px;
+      background-color: lightslategray;
+      float: right;
+      font-size: 70%;
+    }
+    &.favStatus {
+      width: 22vw;
+      padding: 5px;
+      background-color: crimson;
+      float: right;
+      font-size: 70%;
+      //Need to declare color because it is used in a disabled button which changes the global font color declared in variables.scss
+      color: #FFF;
+    }
+  }
+  .promoBGColor{
+    background-color: crimson !important;
+    text-align: right;
+    height: 5vh;
+    min-height: 5vh;
+  }
+  .noPromoBGColor {
+    background-color: lightslategray !important;
+    text-align: right;
+    height: 5vh;
+    min-height: 5vh;
+  }
+}

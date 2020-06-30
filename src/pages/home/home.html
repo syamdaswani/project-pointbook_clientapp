@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="light">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>POINTBOOK</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="card-background-page">
+  <ion-grid no-padding>
+    <ion-row justify-content-center>
+      <ion-col width-50 class="stickToSide">
+        <ion-card *ngFor="let service of services; let i = index"
+                  (click)="sharedFunctions.goToPage(navCtrl, 'ChooseDatetimeDurationPage', {serviceid: service.id})">
+          <div *ngIf="i % 2 == 0">
+            <img src="{{service.bgImagePath}}" style="height:30vh;"/>
+            <div class="card-title">{{service.name}}</div>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col width-50 class="stickToSide">
+        <ion-card *ngFor="let service of services; let i = index"
+                  (click)="sharedFunctions.goToPage(navCtrl, 'ChooseDatetimeDurationPage', {serviceid: service.id})">
+          <div *ngIf="i % 2 != 0">
+            <img src="{{service.bgImagePath}}" style="height:30vh;"/>
+            <div class="card-title">{{service.name}}</div>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
